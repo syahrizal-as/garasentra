@@ -27,6 +27,23 @@
   const desktopQuery = window.matchMedia('(min-width: 721px)');
   desktopQuery.addEventListener('change', event => { if (event.matches) setMenu(false); });
 
+  const dashboardDialog = document.querySelector('#dashboard-dialog');
+  document.querySelectorAll('[data-dashboard-open]').forEach(button => {
+    button.addEventListener('click', () => {
+      dashboardDialog.showModal();
+      document.documentElement.classList.add('dashboard-preview-open');
+    });
+  });
+  dashboardDialog.querySelector('.dashboard-dialog-close').addEventListener('click', () => dashboardDialog.close());
+  dashboardDialog.addEventListener('close', () => document.documentElement.classList.remove('dashboard-preview-open'));
+  dashboardDialog.addEventListener('click', event => {
+    if (event.target !== dashboardDialog) return;
+    const bounds = dashboardDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) {
+      dashboardDialog.close();
+    }
+  });
+
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   const panels = [...document.querySelectorAll('[role="tabpanel"]')];
   const selectTab = tab => {

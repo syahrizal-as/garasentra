@@ -20,7 +20,7 @@ Unggah isi folder `dist` sebagai website statis, atau gunakan konfigurasi `netli
 
 - WhatsApp penjualan: `089649532860` (format internasional `6289649532860`). Tautan kontak berada di `dist/index.html`; pembentukan pesan ada di `dist/app.js`.
 - Formulir membuka WhatsApp dengan pesan yang dapat ditinjau pengunjung sebelum dikirim. Tidak menyimpan data formulir ke server.
-- Tampilan dashboard dan modul merupakan ilustrasi dengan data contoh, bukan tangkapan layar produk yang sudah diverifikasi.
+- Preview utama menggunakan gambar dashboard yang dikirim pengguna di `dist/assets/dashboard-bengkelpro.png`, dengan dialog untuk memperbesar gambar. Preview tiga modul lainnya tetap berupa ilustrasi dengan data contoh.
 - Harga tidak dicantumkan karena paket resmi belum diberikan. Semua permintaan penawaran diarahkan ke konsultasi.
 - Fitur didasarkan pada HTML awal yang diberikan pengguna.
 - Font Google digunakan dengan fallback sistem jika tidak tersedia.
