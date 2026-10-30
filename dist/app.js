@@ -87,7 +87,7 @@
     const type = String(values.get('type') || '').trim();
     const needs = String(values.get('needs') || '').trim();
     const message = [
-      'Halo tim BengkelPro, saya tertarik untuk konsultasi dan menjadwalkan demo.',
+      'Halo tim GARASENTRA, saya tertarik untuk konsultasi dan menjadwalkan demo.',
       '',
       `Nama: ${name}`,
       `Nama bengkel: ${workshop}`,
